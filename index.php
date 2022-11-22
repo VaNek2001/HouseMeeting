@@ -1,7 +1,20 @@
-require __DIR__ . '/vendor/autoload.php'; //загрузка всех установленных библиотек
-use dotenv\Dotenv;                        //импорт класса Dotenv из пространства имен dotenv
-if (file_exists(__DIR__."/.env"))
+<?php
+
+require('dbconnect.php');
+
+$sql = "SELECT * FROM `house`";
+
+if($result = $conn->query($sql))
 {
-$dotenv = Dotenv::createImmutable(__DIR__);
-$dotenv->load(); //все параметры окружения помещаются в массив $_ENV
+    echo "<table><tr><th>id</th><th>Адрес</th></tr>";
+    foreach($result as $row){
+        echo "<tr>";
+        echo "<td>" . $row["id"] . "</td>";
+        echo "<td>" . $row["address"] . "</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+} else
+{
+    echo "Ошибка: " . $conn->error;
 }
