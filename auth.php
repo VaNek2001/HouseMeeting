@@ -11,11 +11,11 @@ if ($_POST['login']){
             $_SESSION['admin'] = $row['is_admin'];
         }
         else{
-            $message = 'Неверный логин или пароль';
+            $message = 'Неверный пароль!';
         }
     }
     else{
-        $message = 'Неверный логин или пароль';
+        $message = 'Неверный логин!';
     }
 
 }

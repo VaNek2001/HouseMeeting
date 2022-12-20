@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Информационная система отеля "HOTEL"</title>
+    <title>ССМД</title>
     <link href="style.css" rel="stylesheet">
 </head>
 
@@ -21,9 +21,8 @@
                 }
 
                 echo ('<li><a href="meeting.php">Собрания</a></li>');
-                echo ('<li><a href="bron_list.php">Бронирования</a></li>');
-                echo ('<li><a href="guest.php">Гости</a></li>');
-                echo ('<li><a href="new_bron.php">Новая бронь</a></li>');
+                echo ('<li><a href="question.php">Вопросы</a></li>');
+
                 echo ('<li><a href="index.php?logout=1">'.$_SESSION['username'].' \→ </a></li>');
             }
             else {

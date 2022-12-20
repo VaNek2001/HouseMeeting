@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Информационная система отеля "HOTEL"</title>
+    <title>ССМД</title>
     <link href="style.css" rel="stylesheet">
 </head>
 
