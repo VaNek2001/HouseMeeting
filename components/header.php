@@ -26,15 +26,10 @@
                 echo ('<li><a href="index.php?logout=1">'.$_SESSION['username'].' \→ </a></li>');
             }
             else {
-                echo ('<li><a href="meeting.php">Собрания</a></li>');
+                echo ('<li class="list-text"><a href="meeting.php">Собрания</a></li>');
+                echo ('<li><button class="vhdReg"><a href="login.php">Войти</a></button></li>');
+                echo ('<li><button class="vhdReg"><a href="reg.php">Регистрация</a></button></li>');
 
-                echo <<<HTML
-                <form method="post" action="../index.php">
-                    <input type="text" placeholder="Введите логин" name="login" id="id1">
-                    <input type="password" placeholder="Введите пароль" name="password" id="id2">
-                    <input type="submit" value="Войти">
-                </form>
-                HTML;
                 require('message.php');
             }
             ?>
