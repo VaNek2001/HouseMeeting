@@ -9,6 +9,7 @@ if ($_POST['login']){
             $_SESSION['username'] = $_POST['login'];
             $_SESSION['id_auth_user'] = $row['id'];
             $_SESSION['admin'] = $row['is_admin'];
+            $_SESSION['is_picture_url'] = $row['picture_url'];
         }
         else{
             $message = 'Неверный пароль!';

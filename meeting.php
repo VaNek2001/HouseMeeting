@@ -2,6 +2,7 @@
 
 require('dbconnect.php');
 require('components/header.php');
+$flagProfil = 0;
 
 
 if ($_SESSION['username']){

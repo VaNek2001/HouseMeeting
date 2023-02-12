@@ -10,22 +10,17 @@
     <section class="container">
         <h1 class="catalog-title"><a href="meeting.php">ССМД</a></h1>
         <a class="reg_title">Регистрация</a>
-        <form method="post" action="check.php">
-            <p class="logPass">
-                <input  type="text" name="surname" placeholder="Фамилия" id="surname">
-            </p>
+        <form method="post" action="check.php" enctype="multipart/form-data">
 
-            <p class="logPass">
-                <input  type="text" name="name" placeholder="Имя" id="name">
-            </p>
+            <p><input type="file" name="filename"> </p>
 
-            <p class="logPass">
-                <input  type="text" name="lastname" placeholder="Отчество" id="lastname">
-            </p>
+            <p class="logPass"> <input  type="text" name="surname" placeholder="Фамилия" id="surname"> </p>
 
-            <p class="logPass">
-                <input  type="text" name="email" placeholder="Email" id="email">
-            </p>
+            <p class="logPass"> <input  type="text" name="name" placeholder="Имя" id="name"> </p>
+
+            <p class="logPass"> <input  type="text" name="lastname" placeholder="Отчество" id="lastname"> </p>
+
+            <p class="logPass"> <input  type="text" name="email" placeholder="Email" id="email"> </p>
 
             <?php
             $sql = "SELECT * FROM house";
@@ -40,13 +35,9 @@
 
             </section>
 
-    <p class="logPass">
-        <input  type="text" name="login" placeholder="Логин" id="login">
-    </p>
+            <p class="logPass"> <input  type="text" name="login" placeholder="Логин" id="login"> </p>
 
-    <p class="logPass">
-        <input  type="password" name="password" placeholder="Пароль" id="password">
-    </p>
+            <p class="logPass"> <input  type="password" name="password" placeholder="Пароль" id="password"> </p>
 
             <p class="vhd"><input class="reg_btn" type="submit" value="Зарегистрироваться"></p>
 

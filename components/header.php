@@ -6,6 +6,7 @@
     <link href="style.css" rel="stylesheet">
 </head>
 
+
 <body>
 <header class="site-header">
     <nav class="site-navigation">
@@ -16,19 +17,31 @@
 
             <?php
             if ($_SESSION['username']) {
+
                 if ($_SESSION['admin']) {
-                    echo ('<li><a href="product_add.php">Добавить продукт</a></li>');;
+                    echo ('<li><a href="product_add.php">Добавить продукт</a></li>');
                 }
 
-                echo ('<li><a href="meeting.php">Собрания</a></li>');
-                echo ('<li><a href="question.php">Вопросы</a></li>');
+                echo ('<a href="meeting.php">Собрания</a>');
+                echo ('<a href="question.php">Вопросы</a>');
 
-                echo ('<li><a href="index.php?logout=1">'.$_SESSION['username'].' \→ </a></li>');
+                echo ('<li><a href="profil.php" > <h0 class="profil-name">'.$_SESSION['username'].'</h0>
+                        <style>
+                        .round {
+                                border-radius: 100px;
+                                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+                                }
+                        .profil-name {
+                            padding-left: 20px;
+                            padding-right: 10px;
+                        }
+                        </style>
+                        <img class="round" src="'.$_SESSION['is_picture_url'].'" alt="Task picture" height="60px" width="60px"></a></li>');
             }
             else {
-                echo ('<li class="list-text"><a href="meeting.php">Собрания</a></li>');
-                echo ('<li><button class="vhdReg"><a href="login.php">Войти</a></button></li>');
-                echo ('<li><button class="vhdReg"><a href="reg.php">Регистрация</a></button></li>');
+                echo ('<a href="meeting.php">Собрания</a>');
+                echo ('<button class="vhdReg"><a href="login.php">Войти</a></button>');
+                echo ('<button class="vhdReg"><a href="reg.php">Регистрация</a></button>');
 
                 require('message.php');
             }
