@@ -36,7 +36,7 @@
                             padding-right: 10px;
                         }
                         </style>
-                        <img class="round" src="'.$_SESSION['is_picture_url'].'" alt="Task picture" height="60px" width="60px"></a></li>');
+                        <img class="round" app="'.$_SESSION['is_picture_url'].'" alt="Task picture" height="60px" width="60px"></a></li>');
             }
             else {
                 echo ('<a href="meeting.php">Собрания</a>');

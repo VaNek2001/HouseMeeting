@@ -1,19 +1,22 @@
 <?php
 
 namespace Framework;
-use Framework\Router;
 
+use Dotenv\Dotenv;
 
 class Application
 {
-    public static function init(){
-        require "src/routes.php";
-        echo "Приложение инициализировано<p>";
-        foreach (Router::$routes as $route){
-            $route->getParams();
-        }
-        foreach (Router::$routes as $route){
-            $route->getMask();
-        }
+    private Router $router;
+
+
+    public function __construct(Router $router)
+    {
+        $this->router = $router;
+    }
+
+
+    public function run()
+    {
+        echo $this->router->getContent();
     }
 }

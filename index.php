@@ -1,16 +1,22 @@
 <?php
 
-use Framework\Request;
-use Framework\Router;
-use Framework\Application;
+use Dotenv\Dotenv;
+use Framework\Container;
 
 if ( file_exists(dirname(__FILE__).'/vendor/autoload.php') ) {
     require_once dirname(__FILE__).'/vendor/autoload.php';
 }
+if (file_exists(".env"))
+{
+    $dotenv = Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+    echo "Окружение загружено<p>";
+}
+else {
+    echo "Ошибка хагрузки ENV<br>";
+}
+Container::getApp()->run();
 
-$request = new Request();
-Application::init();
-echo (new Router($request))->getContent();
 
 exit();
 

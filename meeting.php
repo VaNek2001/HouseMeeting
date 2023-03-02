@@ -45,7 +45,7 @@ if($result = $conn->query($sql))
         echo "<td>" . $row["date"] . "</td>";
         echo "<td>" . $row["address"] . "</td>";
         echo "<td >";
-        echo '<IMG src="'.$row["img"].'" width="40" height="40">';
+        echo '<IMG app="'.$row["img"].'" width="40" height="40">';
         echo "</td>";
         echo "<tr>";
     }
