@@ -1,7 +1,7 @@
 <?php
 
 require('dbconnect.php');
-require('components/header.php');
+require('components/header1.php');
 
 if ($_SESSION['username']){
     require('components/question_add_dell.php');

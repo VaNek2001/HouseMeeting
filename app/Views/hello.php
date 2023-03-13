@@ -8,6 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-<h2>Здравствуйте, <?=$data['name']?></h2>
+<?php require 'app/views/header.php'?>
+<h2>Главная страница</h2>
+<p>Даннные представления:</p>
+<?=var_dump($data)?>
 </body>
 </html>

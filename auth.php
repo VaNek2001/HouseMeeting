@@ -2,7 +2,7 @@
 session_start();
 
 if ($_POST['login']){
-    $result = $conn->query("SELECT * FROM users WHERE login='".$_POST['login']."'");
+    $result = $conn->query("SELECT * FROM user WHERE login='".$_POST['login']."'");
 
     if ($row = $result->fetch()){
         if (md5($_POST['password']) == $row['password']){

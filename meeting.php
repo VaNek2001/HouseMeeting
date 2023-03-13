@@ -1,7 +1,7 @@
 <?php
 
 require('dbconnect.php');
-require('components/header.php');
+require('components/header1.php');
 $flagProfil = 0;
 
 
