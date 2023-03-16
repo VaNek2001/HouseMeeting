@@ -1,6 +1,8 @@
 <?php
 
 namespace Framework;
+//use App\Controllers;
+//use function PHPSTORM_META\elementType;
 
 use Framework\Exceptions\MethodNotFoundException;
 use Framework\Exceptions\RouteNotFoundException;

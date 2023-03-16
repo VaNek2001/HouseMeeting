@@ -87,6 +87,4 @@ class Request
     {
         $this->session = $session;
     }
-
-
 }
