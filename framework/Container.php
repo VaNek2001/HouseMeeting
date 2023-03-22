@@ -16,7 +16,6 @@ class Container
 
     public static function getAuth(): Auth
     {
-        echo ('создан объект Auth');
         return new Auth(self::getRequest());
     }
 
@@ -55,6 +54,8 @@ class Container
     public static function getFileUploader(): FileUploader
     {
         return self::getS3FileUploader();
+        //Для изменения технологии работы с файлами поменять метод
+        //return self::getLocalFileUploader();
     }
 
     public static function getS3FileUploader(): \S3FileUploader
@@ -66,4 +67,8 @@ class Container
     {
         return new \LocalFileUploader();
     }
+//    public static function getDbConnection(): \DbConnection
+//    {
+//        return new \DbConnection();
+//    }
 }

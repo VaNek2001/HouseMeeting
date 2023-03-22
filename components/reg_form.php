@@ -5,10 +5,10 @@
     <title>ССМД</title>
     <link href="style.css" rel="stylesheet">
 </head>
-
+z
 <section class="form">
     <section class="container">
-        <h1 class="catalog-title"><a href="meeting.php">ССМД</a></h1>
+        <h1 class="catalog-title"><a href="index.php">ССМД</a></h1>
         <a class="reg_title">Регистрация</a>
         <form method="post" action="check.php" enctype="multipart/form-data">
 

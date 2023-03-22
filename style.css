@@ -9,6 +9,10 @@ a {
     margin: 5px;
 }
 
+.outButton {
+    height: 40px;
+}
+
 .reg_title {
     display: flex;
     justify-content: center;
@@ -50,6 +54,7 @@ a {
     flex-wrap: wrap;
     justify-content: flex-end;
     align-content: center;
+    align-items: center;
 }
 
 .zagolovok-profil {
@@ -104,10 +109,15 @@ a {
     color: #845927;
 }
 
+.site-m {
+    margin-top: 100px;
+}
+
 .site-main {
     display: flex;
     width: 700px;
     margin: 0 auto;
+    padding-top: 100px;
     justify-content: space-between;
     align-items: center;
 }
@@ -207,6 +217,17 @@ select#id2 {
 .logPass {
     display: flex;
     justify-content: center;
+}
+
+.logPassContainer {
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+
+.colorError{
+    color: red;
 }
 
 input#id1 {

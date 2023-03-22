@@ -6,9 +6,6 @@ use Framework\Container;
 use Framework\Controller;
 use Framework\Request;
 
-
-//use UserModel;
-
 class PageController extends Controller
 {
     public function index(Request $request, $view = null)
@@ -16,6 +13,6 @@ class PageController extends Controller
         if ($view)
             return $this->view($view.'.php', ['user' =>  $request->getUser(), 'message' => $request->getSession()['msg']]);
         else
-            return $this->view('hello.php', ['user' =>  $request->getUser(), 'message' => $request->getSession()['msg']]);
+            return $this->view('main.php', ['user' =>  $request->getUser(), 'message' => $request->getSession()['msg']]);
     }
 }

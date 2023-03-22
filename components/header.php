@@ -37,10 +37,11 @@
                         }
                         </style>
                         <img class="round" src="'.$_SESSION['is_picture_url'].'" alt="Task picture" height="60px" width="60px"></a></li>');
+                echo ('<button class="outButton"><a href="/logout">Выйти</a></button>');
             }
             else {
                 echo ('<a href="meeting.php">Собрания</a>');
-                echo ('<button class="vhdReg"><a href="login.php">Войти</a></button>');
+                echo ('<button class="vhdReg"><a href="/form">Войти</a></button>');
                 echo ('<button class="vhdReg"><a href="reg.php">Регистрация</a></button>');
 
                 require('message.php');
